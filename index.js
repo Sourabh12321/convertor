@@ -46,7 +46,7 @@ app.post('/convert', async (req, res) => {
             // Extract the generated Shayari from the response
             const data = response.data.choices[0].text.trim();
             res.send({ "msg": data });
-            return;
+            
         } else if (language == "javascript") {
             let a = `Convert this code:${code} into javascript code`;
             console.log(a);
@@ -68,7 +68,7 @@ app.post('/convert', async (req, res) => {
             // Extract the generated Shayari from the response
             const data = response.data.choices[0].text.trim();
             res.send({ "msg": data });
-            return;
+            
 
         } else if (language == "java") {
             let a = `Convert this code:${code} into java code`;
@@ -91,7 +91,6 @@ app.post('/convert', async (req, res) => {
             // Extract the generated Shayari from the response
             const data = response.data.choices[0].text.trim();
             res.send({ "msg": data });
-            return;
 
         }
 
